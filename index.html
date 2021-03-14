@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <h1>DevonEvant開發網站</h1>
+    <button onclick="notificationTest()">
+        <h1>DevonEvant開發網站</h1>
+    </button>
 
     <script>
         function registerServiceWorker() {
@@ -22,8 +24,12 @@
 
                 if ('Notification' in window) {
                     Notification.requestPermission().then(status => {
-                        console.log('Notification successful')
-                    }).catch(e => console.log('Error during notification requestPermission:', e))
+                        if (status === 'granted') {
+                            console.log('Notification successful', status);
+                        } else {
+                            status => console.log('Error during notification requestPermission:', status)
+                        }
+                    })
 
                 }
 
@@ -34,7 +40,9 @@
         }
         registerServiceWorker();
     </script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
 </body>
+
 
 
 
