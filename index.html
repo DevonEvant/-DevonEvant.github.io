@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevonEvant開發網站</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
 </head>
 
 <body>
     <h1>DevonEvant開發網站</h1>
+
+    <script>
+        function registerServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js').then(reg => {
+                        console.log('Registration successful', reg);
+                    })
+                    .catch(e => console.error('Error during service worker registration:', e));
+            } else {
+                console.warn('Service Worker is not supported');
+            }
+        }
+    </script>
 </body>
+
+
 
 </html>
