@@ -19,7 +19,7 @@
         function registerServiceWorker() {
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('/sw.js', {
-                    scope: './'
+                    scope: '../Notification'
                 }).then(reg => {
                     console.log('Registration successful', reg);
                 }).catch(e => console.error('Error during service worker registration:', e));
