@@ -3,47 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevonEvant開發網站</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- PWA -->
     <link rel="manifest" href="./manifest.json">
+
+    <title>Document</title>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script> -->
+    <!-- <script src="./ML.js"></script> -->
+
 </head>
 
 <body>
-    <button onclick="notificationTest()">
-        <h1>DevonEvant開發網站</h1>
-    </button>
-
     <script>
-        function registerServiceWorker() {
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').then(reg => {
-                    console.log('Registration successful', reg);
-                }).catch(e => console.error('Error during service worker registration:', e));
-
-                if ('Notification' in window) {
-                    Notification.requestPermission().then(status => {
-                        if (status === 'granted') {
-                            console.log('Notification successful', status);
-                        } else {
-                            status => console.log('Error during notification requestPermission:', status)
-                        }
-                    })
-
-                }
-
-
-            } else {
-                console.warn('Service Worker is not supported');
-            }
+        if ("serviceWorker" in navigator) {
+            console.log('瀏覽器有SW')
+            navigator.serviceWorker.register('./sw.js', {
+                    scope: './'
+                })
+                .then(function swRegister(e) {
+                    console.log("serviceWoker registered");
+                })
+                .catch(function (err) {
+                    console.log(`serviceWoker register Err = ${err}`);
+                });
         }
-        registerServiceWorker();
     </script>
-    <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <div id="img">
+        <p> HI </p>
+    </div>
+
+    <button onclick="fetch_picture()">touch me</button>
+    <button onclick="clear_caches()">clear</button>
+
+
+
+    <style>
+        #img {
+            width: 500px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        body {
+            max-width: 50%;
+            max-height: 50%;
+            /* background-image: url('./caches_file/cat_in_planet.jpg'); */
+
+        }
+    </style>
+
+    <script type="text/javascript" src="./event.js"></script>
+
 </body>
-
-
-
 
 </html>
