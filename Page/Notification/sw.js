@@ -1,5 +1,5 @@
 const cacheName = 'FirstCaches';
-const cacheFile = ['/'];
+const cacheFile = [''];
 
 self.addEventListener('install', event => {
     event.waitUntil(async () => {
