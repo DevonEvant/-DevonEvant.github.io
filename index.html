@@ -5,45 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevonEvant開發網站</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <link rel="manifest" href="./manifest.json">
+    <title>首頁</title>
+
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
-    <button onclick="notificationTest()">
-        <h1>DevonEvant開發網站</h1>
-    </button>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="display-1">DevonEvant網站開發區</div>
+                    <div>
+                        <div>
+                            這個網站的首頁尚未開發，但是應該開發需求不得不架設。
+                        </div>
+                        <div>
+                            現在這個網站僅作為引導網站，在後期會逐漸架設完整，
+                            若在開發過程中有侵犯到他人權益或個人隱私，請善加利用<a
+                                href="https://github.com/DevonEvant/DevonEvant.github.io/issues">issuse</a>告知網站管理員並耐心等待回復。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header h4">專案名：不好意思</div>
+                        <div class="card-body">
+                            <div class="card-title">用來PWA的實驗性網站</div>
+                            <div class="card-text"></div>
+                            <a href="./Page/excuseMe/" class="btn btn-primary">點我連結</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header h4">專案名：PWA網站測試</div>
+                        <div class="card-body">
+                            <div class="card-title">用來PWA的實驗性網站</div>
+                            <div class="card-text"></div>
+                            <a href="./Page/PWATest/" class="btn btn-primary">點我連結</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        function registerServiceWorker() {
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').then(reg => {
-                    console.log('Registration successful', reg);
-                }).catch(e => console.error('Error during service worker registration:', e));
 
-                if ('Notification' in window) {
-                    Notification.requestPermission().then(status => {
-                        if (status === 'granted') {
-                            console.log('Notification successful', status);
-                        } else {
-                            status => console.log('Error during notification requestPermission:', status)
-                        }
-                    })
-
-                }
-
-
-            } else {
-                console.warn('Service Worker is not supported');
-            }
-        }
-        registerServiceWorker();
-    </script>
-    <script type="text/javascript" src="./scripts/main.js"></script>
 </body>
-
-
-
 
 </html>

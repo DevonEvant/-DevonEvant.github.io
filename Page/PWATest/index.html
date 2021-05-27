@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevonEvant開發網站</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <button onclick="notificationTest()">
+        <h1>DevonEvant開發網站</h1>
+    </button>
+
+    <script>
+        function registerServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js').then(reg => {
+                    console.log('Registration successful', reg);
+                }).catch(e => console.error('Error during service worker registration:', e));
+
+                if ('Notification' in window) {
+                    Notification.requestPermission().then(status => {
+                        if (status === 'granted') {
+                            console.log('Notification successful', status);
+                        } else {
+                            status => console.log('Error during notification requestPermission:', status)
+                        }
+                    })
+
+                }
+
+
+            } else {
+                console.warn('Service Worker is not supported');
+            }
+        }
+        registerServiceWorker();
+    </script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+
+
+
+
+</html>

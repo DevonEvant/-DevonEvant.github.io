@@ -1,0 +1,65 @@
+.title {
+    margin: 30px 0px;
+}
+
+.font-write {
+    font-family: 標楷體;
+
+}
+
+.title-1 {
+    font-weight: bolder;
+}
+
+.title-2 {
+    text-align: center;
+}
+
+.slideshow-1 {
+    background-color: rgba(248, 239, 230, 1);
+    padding: 90px 0px;
+}
+
+.slideshow-2 {
+    background-color: white;
+}
+
+.card {
+    background-color: inherit;
+    margin: 20px 0px;
+}
+
+.slideshow-body-1-bg {
+    font-size: 75px;
+    text-align: center;
+    color: rgba(1, 1, 1, 0.0625);
+    transform: rotate(-10deg);
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 0;
+}
+
+.slideshow-3 {
+    border: 2px;
+    border-radius: 5px;
+    border-color: red;
+}
+
+.slideshow-4 {
+    background-color: #DFFFBF;
+}
+
+
+.slideshow-footer {
+    background-color: blanchedalmond;
+    border-top: 4px;
+    border-top-color: black;
+}
+
+.list-group-flush .list-group-item {
+    background-color: inherit;
+}
+
+.article {
+    padding: 2px 20px;
+}
