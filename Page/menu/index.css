@@ -1,0 +1,105 @@
+:root {
+    --block: #3B3F50;
+    --bg: #f0f0f0;
+    --gray: #7c8194;
+    --red: #f96868;
+    --yellow: #ffae6b;
+    --green: #59d99e;
+    --blue: #47aafe;
+    --ocean: #275ab7;
+    --menu: #7033AD;
+    --menu-bg: rgb(255, 255, 255);
+    --menu-hold: rgb(169, 169, 169);
+}
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul.menu {
+    background-color: var(--menu-bg);
+    border-radius: 1rem;
+    list-style-type: none;
+    transition: 0.5s;
+    width: 200px;
+}
+
+li {
+    display: block;
+
+
+}
+
+li:hover {
+    background-color: var(--menu-hold);
+    transition: 0.1s;
+    border-radius: 1rem;
+}
+
+.icon {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--menu);
+}
+
+.menu-title {
+    color: var(--menu);
+    padding: 0 1rem;
+}
+
+div.menu {
+    position: relative;
+    transition: 0.5s;
+    width: 175px;
+    overflow: hidden;
+
+
+}
+
+div.menu.active {
+    transition: 0.5s;
+    width: 55px;
+    /* overflow: hidden; */
+}
+
+.toggle {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 16px);
+    right: -16px;
+    width: 2rem;
+    height: 2rem;
+    /* padding: 1rem; */
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100%;
+    border-color: var(--menu);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.toggle>i {
+    position: absolute;
+    top: calc(50% - (16px/2));
+    left: calc(50% - (16px/2));
+    color: var(--menu);
+}
+
+.toggle.active {
+    transform: rotate(720deg);
+}
+
+.container {
+    position: fixed;
+    right: 0px;
+
+}
+
+body {
+    background-color: var(--bg);
+
+}
