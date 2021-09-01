@@ -1,4 +1,4 @@
-const ConversationBox = new controlAPI.ConversationBoxController();
+const ConversationBox = new ConversationBoxController();
 // const c: any = new ConversationIteratorGenerator(conversationRecode().init)
 // console.log(c.next().value);
 ConversationBox.nextConversation();
