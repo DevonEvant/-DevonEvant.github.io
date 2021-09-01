@@ -1,0 +1,1 @@
+import*as controlAPI from"./control";import"./main.css";const ConversationBox=new controlAPI.ConversationBoxController;ConversationBox.nextConversation();
