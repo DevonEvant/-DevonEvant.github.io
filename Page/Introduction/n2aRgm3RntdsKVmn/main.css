@@ -1,6 +1,6 @@
 .rpg-sizer {
 
-    --rpg-screen-width: calc(90vh);
+    --rpg-screen-height: calc(90vh);
     --rpg-screen-rate: (4 / 3);
 
     --rpg-screen-border-width: 3vh;
@@ -9,7 +9,8 @@
     --rpg-screen-border-color-in: rgb(68, 114, 196);
 }
 
-.conversation-box-container {
+/* .conversation-box-container */
+:root {
     --conversation-box-width: 636px;
     --conversation-box-height: 196px;
     --conversation-box-font-size: 2rem;
@@ -33,9 +34,11 @@ body {
 
 .rpg-sizer {
 
-    width: calc(var(--rpg-screen-width) *var(--rpg-screen-rate));
-    height: var(--rpg-screen-width);
+    width: calc(var(--rpg-screen-height) *var(--rpg-screen-rate));
+    height: var(--rpg-screen-height);
 
+    min-width: calc(var(--conversation-box-width) + 100px);
+    min-height: calc((var(--conversation-box-height) + 100px) * var(--rpg-screen-rate));
 
     position: absolute;
 
@@ -72,13 +75,29 @@ body {
 
 }
 
-.main-screen {
+.bg-screen {
     position: absolute;
 
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+
+}
+
+.main-screen {
+    height: calc(var(--rpg-screen-height) - var(--conversation-box-height) - 20px);
+
+}
+
+.main-screen img {
+    height: 300px;
+    position: relative;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
@@ -183,4 +202,39 @@ body {
 
 .no-display {
     display: none;
+}
+
+
+.screen-too-small {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /* visibility: hidden; */
+
+}
+
+.screen-too-small * {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 1rem;
+
+    font-size: 2rem;
+    color: #fff;
+
+    line-height: 3rem;
+}
+
+@media (min-width: 768px) {
+    .screen-too-small {
+        visibility: hidden;
+    }
 }
