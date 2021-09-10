@@ -58,9 +58,7 @@ function conversationRecode() {
         conversation.print(Character[0], 'C110152351 認為你無法從家庭裡了解任何關於它的資訊，而且還侵犯隱私');
         conversation.print(Character[0], '所以你確定想要瞭解C110152351的家庭狀況？');
         conversation.print(Character[0], '好吧......既然你都這樣堅持了');
-        conversation.print(Character[0], 'C110152351 有 3 個親兄弟，他排行第二');
         conversation.print(Character[0], '媽媽是紙黏土老師，而爸爸從事汽車零件設計');
-        conversation.print(Character[0], '哥哥跟他都是大學生，則弟弟是國中生');
         conversation.print(Character[0], '家庭和睦');
         conversation.print(Character[0], 'C110152351 很小的時候就對電子資訊很有興趣');
         conversation.print(Character[0], '甚至還會主動去學習與實作');
