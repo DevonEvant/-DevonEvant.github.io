@@ -124,17 +124,7 @@ function conversationRecode() {
 
         conversation.print(
             Character[0],
-            'C110152351 有 3 個親兄弟，他排行第二'
-        );
-
-        conversation.print(
-            Character[0],
             '媽媽是紙黏土老師，而爸爸從事汽車零件設計'
-        );
-
-        conversation.print(
-            Character[0],
-            '哥哥跟他都是大學生，則弟弟是國中生'
         );
 
         conversation.print(
